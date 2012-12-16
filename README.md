@@ -1,8 +1,7 @@
 taco-shell
 ==========
 
-- StartAnd and exit Shell
-- Echo a string
--
-- Save and echo Aa variable
-- Execute an executable file found in the path variable
+A UNIX shell written in ruby.
+
+More an experiment in shell writing than anything!
+
