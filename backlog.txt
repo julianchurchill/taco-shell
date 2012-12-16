@@ -1,0 +1,10 @@
+Backlog
+=======
+
+In priority order:
+
+- Start and exit taco shell
+- Echo a string (echo as a builtin command)
+- Save and echo a variable (variable substitution)
+- Execute a file found in the path variable
+
