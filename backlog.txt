@@ -3,6 +3,7 @@ Backlog
 
 In priority order:
 
+- Present a prompt on start taco shell
 - Start and exit taco shell
 - Echo a string (echo as a builtin command)
 - Save and echo a variable (variable substitution)
