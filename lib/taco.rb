@@ -1,7 +1,11 @@
 
 class Taco
+  def initialize output
+    @output_stream = output
+  end
+
   def run
-    STDOUT.puts( "taco> ")
+    @output_stream.puts( "taco> ")
   end
 end
 

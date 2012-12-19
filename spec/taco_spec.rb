@@ -2,9 +2,10 @@ require_relative '../lib/taco'
 
 describe "Taco" do
   it "should present a prompt for input" do
-    STDOUT.should_receive(:puts).with("taco> ")
+    output = double('output')
+    output.should_receive(:puts).with("taco> ")
 
-    taco = Taco.new
+    taco = Taco.new output
     taco.run
   end
 end
