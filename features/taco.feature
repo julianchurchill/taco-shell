@@ -5,6 +5,12 @@ Feature: Taco shell
     I want to start a shell and run commands with variable substitution
 
     @future
+    Scenario: The shell can be started and exited
+        When I run `taco` interactively
+        And I type "exit"
+        Then the exit status should be 1
+
+    @future
     Scenario: The shell presents a prompt
         When I run `taco` interactively
         And I type "exit"
@@ -12,12 +18,6 @@ Feature: Taco shell
         """
         taco> 
         """
-
-    @future
-    Scenario: The shell can be started and exited
-        When I run `taco` interactively
-        And I type "exit"
-        Then the exit status should be 1
 
     @future
     Scenario: Echo a simple string

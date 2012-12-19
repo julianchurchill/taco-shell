@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../lib/taco'
+
+taco = Taco.new
+taco.run
+
