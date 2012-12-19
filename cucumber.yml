@@ -1,1 +1,7 @@
-default: --color
+default: --color --tags ~@future --tags ~@wip features
+wip: --tags @wip --wip features
+future: --tags @future features
+
+autotest: --color --format pretty --tags @wip features
+autotest-all: --color --format progress --tags @wip features
+
