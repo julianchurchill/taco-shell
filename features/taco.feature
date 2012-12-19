@@ -4,25 +4,23 @@ Feature: Taco shell
     As a UNIX user
     I want to start a shell and run commands with variable substitution
 
-    @future
     Scenario: The shell can be started and exited
         When I run `taco` interactively
         And I type "exit"
         Then the exit status should be 0
 
-    @future
     Scenario: The shell presents a prompt
         When I run `taco` interactively
         And I type "exit"
         Then the output should contain exactly:
         """
-        taco> 
+        taco> \n
         """
 
     @future
     Scenario: Echo a simple string
         When I run `taco` interactively
-        And I type "echo 'bananas'"
+        And I type "echo bananas"
         And I type "exit"
         Then the output should contain:
         """
