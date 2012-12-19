@@ -7,6 +7,7 @@ Feature: Taco shell
     @future
     Scenario: The shell presents a prompt
         When I run `taco` interactively
+        And I type "exit"
         Then the output should contain exactly:
         """
         taco> 
@@ -22,6 +23,7 @@ Feature: Taco shell
     Scenario: Echo a simple string
         When I run `taco` interactively
         And I type "echo 'bananas'"
+        And I type "exit"
         Then the output should contain:
         """
         bananas
@@ -32,6 +34,7 @@ Feature: Taco shell
         When I run `taco` interactively
         And I type "set var bananas"
         And I type "echo $var"
+        And I type "exit"
         Then the output should contain:
         """
         bananas
