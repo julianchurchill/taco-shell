@@ -6,33 +6,33 @@ Feature: Taco shell
 
     @future
     Scenario: The shell presents a prompt
-        When I run `taco`
-        Then I should see
+        When I run `taco` interactively
+        Then the output should contain exactly:
         """
         taco> 
         """
 
     @future
     Scenario: The shell can be started and exited
-        When I run `taco`
-        And I enter `exit`
-        Then the program should exit successfully
+        When I run `taco` interactively
+        And I type "exit"
+        Then the exit status should be 1
 
     @future
     Scenario: Echo a simple string
-        When I run `taco`
-        And I enter `echo "bananas"`
-        Then I should see
+        When I run `taco` interactively
+        And I type "echo 'bananas'"
+        Then the output should contain:
         """
         bananas
         """
 
     @future
     Scenario: Run a command with variable substitution
-        When I run `taco`
-        And I enter `set var "bananas"`
-        And I enter `echo $var`
-        Then I should see
+        When I run `taco` interactively
+        And I type "set var bananas"
+        And I type "echo $var"
+        Then the output should contain:
         """
         bananas
         """
