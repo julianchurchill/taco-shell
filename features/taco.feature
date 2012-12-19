@@ -8,7 +8,7 @@ Feature: Taco shell
     Scenario: The shell can be started and exited
         When I run `taco` interactively
         And I type "exit"
-        Then the exit status should be 1
+        Then the exit status should be 0
 
     @future
     Scenario: The shell presents a prompt
