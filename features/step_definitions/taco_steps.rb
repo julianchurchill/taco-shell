@@ -1,9 +1,6 @@
-Given /^a terminal prompt$/ do
-    pending # express the regexp above with the code you wish you had
-end
 
-When /^I run `taco`$/ do
-    pending # express the regexp above with the code you wish you had
+When /^I run `(.*?)`$/ do |command|
+  `#{command}`
 end
 
 When /^I enter `(.*?)`$/ do |command|
@@ -14,7 +11,7 @@ Then /^the program should exit successfully$/ do
     pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should see "(.*?)"$/ do |arg1|
+Then /^I should see$/ do |string|
     pending # express the regexp above with the code you wish you had
 end
 
