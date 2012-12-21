@@ -8,8 +8,9 @@ class Taco
   def process_input
     @output_stream.puts( "taco> ")
     input = @input_stream.gets
-    if input == "echo simplestring"
-      @output_stream.puts( "simplestring" )
+    echo_command_match = /echo *(.*)/.match( input )
+    if echo_command_match
+      @output_stream.puts( echo_command_match[1] )
     end
   end
 end

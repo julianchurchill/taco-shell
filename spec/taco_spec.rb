@@ -19,4 +19,14 @@ describe "Taco" do
     taco = Taco.new output, STDIN
     taco.process_input
   end
+
+  it "should echo a blank line if no string specified" do
+    output = double('output')
+    output.should_receive(:puts).with("taco> ")
+    STDIN.should_receive(:gets).and_return("echo")
+    output.should_receive(:puts).with("")
+
+    taco = Taco.new output, STDIN
+    taco.process_input
+  end
 end
