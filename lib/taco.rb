@@ -6,7 +6,7 @@ class Taco
 
   def run
     @output_stream.puts( "taco> ")
-    input = STDIN.read
+    input = STDIN.gets
     if input == "echo simplestring"
       @output_stream.puts( "simplestring" )
     end
