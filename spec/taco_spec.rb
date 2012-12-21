@@ -27,8 +27,7 @@ describe "Taco shell" do
   context "echo command" do
     it "should echo a simple string" do
       (input = InputFaker.new).prime_with [ "echo simplestring" ]
-      output = mock('output')
-      output.should_receive(:puts).with("taco> ")
+      output = mock('output', :puts => nil)
       output.should_receive(:puts).with("simplestring")
 
       taco = Taco.new output, input
@@ -37,8 +36,7 @@ describe "Taco shell" do
 
     it "should echo a blank line if no string specified" do
       (input = InputFaker.new).prime_with [ "echo" ]
-      output = mock('output')
-      output.should_receive(:puts).with("taco> ")
+      output = mock('output', :puts => nil)
       output.should_receive(:puts).with("")
 
       taco = Taco.new output, input
