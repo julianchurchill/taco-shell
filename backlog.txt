@@ -1,11 +1,17 @@
 Backlog
 =======
 
-In priority order:
+Key: '/' means done (ticked)
 
-- Present a prompt on start taco shell
-- Start and exit taco shell
-- Echo a string (echo as a builtin command)
+Todo, in priority order:
+
 - Save and echo a variable (variable substitution)
 - Execute a file found in the path variable
+- Chain commands based on return value success indication
+
+Done:
+
+/ - Present a prompt on start taco shell
+/ - Start and exit taco shell
+/ - Echo a string (echo as a builtin command)
 
