@@ -6,7 +6,7 @@ describe "Taco" do
     output.should_receive(:puts).with("taco> ")
     STDIN.should_receive(:gets).and_return("")
 
-    taco = Taco.new output
+    taco = Taco.new output, STDIN
     taco.run
   end
 
@@ -16,7 +16,7 @@ describe "Taco" do
     STDIN.should_receive(:gets).and_return("echo simplestring")
     output.should_receive(:puts).with("simplestring")
 
-    taco = Taco.new output
+    taco = Taco.new output, STDIN
     taco.run
   end
 end
