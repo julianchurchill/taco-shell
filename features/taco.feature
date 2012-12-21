@@ -17,7 +17,6 @@ Feature: Taco shell
         taco> \n
         """
 
-    @wip
     Scenario: Echo a simple string
         When I run `taco` interactively
         And I type "echo bananas"
