@@ -7,7 +7,7 @@ describe "Taco" do
     STDIN.should_receive(:gets).and_return("")
 
     taco = Taco.new output, STDIN
-    taco.run
+    taco.process_input
   end
 
   it "should echo a string with the echo command" do
@@ -17,6 +17,6 @@ describe "Taco" do
     output.should_receive(:puts).with("simplestring")
 
     taco = Taco.new output, STDIN
-    taco.run
+    taco.process_input
   end
 end

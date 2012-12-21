@@ -5,7 +5,7 @@ class Taco
     @input_stream = input
   end
 
-  def run
+  def process_input
     @output_stream.puts( "taco> ")
     input = @input_stream.gets
     if input == "echo simplestring"

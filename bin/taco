@@ -2,5 +2,5 @@
 require_relative '../lib/taco'
 
 taco = Taco.new STDOUT, STDIN
-taco.run
+taco.process_input
 
